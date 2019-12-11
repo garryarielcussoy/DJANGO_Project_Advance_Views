@@ -5,6 +5,13 @@
 {% block content %}
 <!-- Blog Post -->
 <div class="container-fluid">
+    <div class="row">
+        <div class="col-12 contain-button">
+            <button class="share btn save btn-warning"><a href="{% url 'alphatech:forms' %}">Share Your Story</a></button>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
     <div class="row content-field">
     {% for blog in blogs %}
         <div class="col-2"></div>

@@ -136,6 +136,14 @@ header nav ul li .active-page{
 }
 
 /*-------------------- BLOG -------------------- */
+.contain-button{
+    text-align: center;
+}
+
+.share{
+    margin: 2% auto;
+}
+
 .content-field{
     text-align: center;
     margin: 0 0 10% 0;

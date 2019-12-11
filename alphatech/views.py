@@ -12,7 +12,7 @@ def index(request):
 # Blog Page
 def blog(request):
     sent = {
-        'blogs' : Blog.objects.all()
+        'blogs' : Blog.objects.all()[::-1] #To make the newer post appear upper
     }
     return render(request, 'alphatech/blog.html', sent)
 
