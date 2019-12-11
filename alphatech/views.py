@@ -7,32 +7,35 @@ from .models import Blog, Mentee, Mentor
 
 # Index Page
 def index(request):
-    return render(request, 'alphatech/index.html', {})
+    return render(request, 'alphatech/index.html', {'message': '1'})
 
 # Blog Page
 def blog(request):
     sent = {
-        'blogs' : Blog.objects.all()[::-1] #To make the newer post appear upper
+        'blogs' : Blog.objects.all()[::-1], #To make the newer post appear upper
+        'message' : '2'
     }
     return render(request, 'alphatech/blog.html', sent)
 
 # Mentor Page
 def mentor(request):
     sent = {
-        'mentors' : Mentor.objects.all()
+        'mentors' : Mentor.objects.all(),
+        'message' : '3'
     }
     return render(request, 'alphatech/mentor.html', sent)
 
 # Mentee Page
 def mentee(request):
     sent = {
-        'mentees' : Mentee.objects.all()
+        'mentees' : Mentee.objects.all(),
+        'message' : '4'
     }
     return render(request, 'alphatech/mentee.html', sent)
 
 # Author Page
 def author(request):
-    return render(request, 'alphatech/author.html', {})
+    return render(request, 'alphatech/author.html', {'message' : '5'})
 
 # Read More
 def read_more(request, blog_id):
