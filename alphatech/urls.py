@@ -11,5 +11,5 @@ urlpatterns = [
     path('author/', views.author, name='author'),
     path('forms/', views.forms, name='forms'),
     path('submit_form/', views.submit_form, name="submit_form"),
-    path('<int:blog_id>/', views.read_more, name="read_more")
+    path('blog/<int:blog_id>/', views.read_more, name="read_more")
 ]

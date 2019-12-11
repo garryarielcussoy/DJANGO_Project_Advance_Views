@@ -6,11 +6,11 @@
             <div class="col-6">
                 <nav>
                     <ul>
-                        <li><a href="../" class="home-tab {% if message == '1' %}active-page{% endif %}">Home</a></li>
-                        <li><a href="../blog" class="blog-tab {% if message == '2' %}active-page{% endif %}">Blog</a></li>
-                        <li><a href="../mentor" class="mentor-tab {% if message == '3' %}active-page{% endif %}">Mentor</a></li>
-                        <li><a href="../mentee" class="mentee-tab {% if message == '4' %}active-page{% endif %}">Mentee</a></li>
-                        <li><a href="../author" class="author-tab {% if message == '5' %}active-page{% endif %}">Author</a></li>
+                        <li><a href="{% url 'alphatech:index' %}" class="home-tab {% if message == '1' %}active-page{% endif %}">Home</a></li>
+                        <li><a href="{% url 'alphatech:blog' %}" class="blog-tab {% if message == '2' %}active-page{% endif %}">Blog</a></li>
+                        <li><a href="{% url 'alphatech:mentor' %}" class="mentor-tab {% if message == '3' %}active-page{% endif %}">Mentor</a></li>
+                        <li><a href="{% url 'alphatech:mentee' %}" class="mentee-tab {% if message == '4' %}active-page{% endif %}">Mentee</a></li>
+                        <li><a href="{% url 'alphatech:author' %}" class="author-tab {% if message == '5' %}active-page{% endif %}">Author</a></li>
                     </ul>
                 </nav>
             </div>
