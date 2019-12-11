@@ -1,0 +1,28 @@
+{% extends 'alphatech/base.html'%}
+
+{% block title %}Write Your Post{% endblock %}
+
+{% block content %}
+    <form method="POST" class="post-form" action="{% url 'alphatech:submit_form' %}">
+        Bagikan ceritamu disini!
+        <br />
+        <br />
+        {% csrf_token %}
+        <label for="judul_post">Judul</label>
+        <br />
+        <input class="input-box" type="text" name="judul_post" id="judul_post">
+        <br />
+
+        <label for="foto">Lokasi Foto</label>
+        <br />
+        <input class="input-box" type="text" name="foto" id="foto">
+        <br />
+
+        <label for="konten">Konten</label>
+        <br />
+        <textarea class="input-box" type="text" name="konten" id="konten" rows="10"></textarea>
+        <br />
+
+        <button type="submit" class="save btn btn-warning">Share Your Post</button>
+    </form>
+{% endblock %}

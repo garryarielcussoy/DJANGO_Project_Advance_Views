@@ -1,0 +1,24 @@
+{% extends 'alphatech/base.html' %}
+
+{% block title %}Mentor{% endblock %}
+
+{% block content %}
+<!-- Mentor -->
+{% load static %}
+<div class="container-fluid">
+        <div class="row mentor-page">
+            <div class="col-12 our-mentor">Our Mentor</div>
+            {% for mentor in mentors %}
+                <div class="col-4 img-box">
+                    <img class="mentor-img" src="{{mentor.foto}}">
+                </div>
+                <div class="col-8">
+                    <h4>{{mentor.nama_lengkap}}</h4>
+                    <h6>{{mentor.pengalaman}}</h6>
+                    "{{mentor.testimoni}}"
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'alphatech/base.html' %}
+
+{% block title %}Mentee{% endblock %}
+
+{% block content %}
+<!-- Mentee -->
+{% load static %}
+<div class="container-fluid">
+        <div class="row mentee-page">
+            <div class="col-12 our-mentee">Our Mentee</div>
+            {% for mentee in mentees %}
+                <div class="col-2"></div>
+                <div class="col-4">
+                    <img class="mentee-img" src="{{mentee.foto}}">
+                </div>
+                <div class="col-4">
+                    <h4>{{mentee.nama_lengkap}}</h4>
+                    "{{mentee.testimoni}}"
+                </div>
+                <div class="col-2"></div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

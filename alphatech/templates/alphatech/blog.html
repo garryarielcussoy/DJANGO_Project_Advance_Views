@@ -1,0 +1,36 @@
+{% extends 'alphatech/base.html' %}
+
+{% block title%}Blog{% endblock %}
+
+{% block content %}
+<!-- Blog Post -->
+<div class="container-fluid">
+    <div class="row content-field">
+    {% for blog in blogs %}
+        <div class="col-2"></div>
+        <div class="col-8 blog-post">
+            {% load static %}
+            <img class="blog-img" src="{{blog.foto}}">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-6">{{blog.waktu_publikasi}}</div>
+                    <div class="col-6">{{blog.jumlah_komentar}} Comment</div>
+                    <h3 class="blog-article-title">{{blog.judul_post}}</h3>
+                    <!-- <p class="blog-article">
+                        {{blog.konten}}
+                    </p>
+                    <p>
+                        <a class="baca-selengkapnya">Baca Selengkapnya</a>
+                    </p> -->
+                    <div class = "post_body">
+                        {{ blog.konten|safe|truncatewords:"50"|linebreaks }}
+                        <a href="{% url 'alphatech:read_more' blog.id %}">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-2"></div>   
+    {% endfor %}    
+    </div>
+</div>
+{% endblock %}

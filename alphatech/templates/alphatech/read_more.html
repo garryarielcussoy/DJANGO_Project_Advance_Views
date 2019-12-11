@@ -1,0 +1,27 @@
+{% extends 'alphatech/base.html' %}
+
+{% block title%}{{content_blog.judul_post}}{% endblock %}
+
+{% block content %}
+<!-- Blog Post -->
+<div class="container-fluid">
+    <div class="row content-field">
+        <div class="col-2"></div>
+        <div class="col-8 blog-post">
+            {% load static %}
+            <img class="blog-img" src="{{content_blog.foto}}">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-6">{{content_blog.waktu_publikasi}}</div>
+                    <div class="col-6">{{content_blog.jumlah_komentar}} Comment</div>
+                    <h3 class="blog-article-title">{{content_blog.judul_post}}</h3>
+                    <p class="blog-article">
+                        {{content_blog.konten}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-2"></div>       
+    </div>
+</div>
+{% endblock %}
